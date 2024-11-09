@@ -121,4 +121,4 @@ curl  -X 'POST' 'http://127.0.0.1:8888/api/prophet_active_power_forecast_multi'
           }'
 ```
 
-The service response to the HTTP request is a JSON object which contains the predicted values under the "forecast" key.
+The service response to the HTTP request is a JSON object which contains the forecasted values under the "forecast" key.
