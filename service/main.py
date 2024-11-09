@@ -99,23 +99,23 @@ async def active_power_forecast_single(input_data: model_input_single, response:
 
     **API test using cURL**:\n
         curl -X 'POST' 'http://SERVER_IP_ADDRESS:PORT/api/arima_active_power_forecast_single'
-                -H 'accept: application/json'
-                -H 'Content-Type: application/json'
-                -d '{
-                        "current": CURRENT_VALUE,
-                        "voltage": VOLTAGE_VALUE,
-                        "reactive_power": REACTIVE_POWER_VALUE,
-                        "apparent_power": APPARENT_POWER_VALUE,
-                        "power_factor": POWER_FACTOR_VALUE,
-                        "main": "MAIN_VALUE",
-                        "feels_like": FEELS_LIKE_VALUE,
-                        "temp_min": TEMP_MIN_VALUE,
-                        "temp_max": TEMP_MAX_VALUE,
-                        "pressure": PRESSURE_VALUE,
-                        "humidity": HUMIDITY_VALUE,
-                        "speed": SPEED_VALUE,
-                        "deg": DEG_VALUE,
-                    }'
+             -H 'accept: application/json'
+             -H 'Content-Type: application/json'
+             -d '{
+                     "current": CURRENT_VALUE,
+                     "voltage": VOLTAGE_VALUE,
+                     "reactive_power": REACTIVE_POWER_VALUE,
+                     "apparent_power": APPARENT_POWER_VALUE,
+                     "power_factor": POWER_FACTOR_VALUE,
+                     "main": "MAIN_VALUE",
+                     "feels_like": FEELS_LIKE_VALUE,
+                     "temp_min": TEMP_MIN_VALUE,
+                     "temp_max": TEMP_MAX_VALUE,
+                     "pressure": PRESSURE_VALUE,
+                     "humidity": HUMIDITY_VALUE,
+                     "speed": SPEED_VALUE,
+                     "deg": DEG_VALUE,
+                 }'
     '''
     data = input_data.model_dump()
 
@@ -227,23 +227,23 @@ async def active_power_forecast_single(input_data: model_input_single, response:
 
     **API test using cURL**:\n
         curl -X 'POST' 'http://SERVER_IP_ADDRESS:PORT/api/arima_active_power_forecast_single'
-                -H 'accept: application/json'
-                -H 'Content-Type: application/json'
-                -d '{
-                        "current": CURRENT_VALUE,
-                        "voltage": VOLTAGE_VALUE,
-                        "reactive_power": REACTIVE_POWER_VALUE,
-                        "apparent_power": APPARENT_POWER_VALUE,
-                        "power_factor": POWER_FACTOR_VALUE,
-                        "main": "MAIN_VALUE",
-                        "feels_like": FEELS_LIKE_VALUE,
-                        "temp_min": TEMP_MIN_VALUE,
-                        "temp_max": TEMP_MAX_VALUE,
-                        "pressure": PRESSURE_VALUE,
-                        "humidity": HUMIDITY_VALUE,
-                        "speed": SPEED_VALUE,
-                        "deg": DEG_VALUE,
-                    }'
+             -H 'accept: application/json'
+             -H 'Content-Type: application/json'
+             -d '{
+                     "current": CURRENT_VALUE,
+                     "voltage": VOLTAGE_VALUE,
+                     "reactive_power": REACTIVE_POWER_VALUE,
+                     "apparent_power": APPARENT_POWER_VALUE,
+                     "power_factor": POWER_FACTOR_VALUE,
+                     "main": "MAIN_VALUE",
+                     "feels_like": FEELS_LIKE_VALUE,
+                     "temp_min": TEMP_MIN_VALUE,
+                     "temp_max": TEMP_MAX_VALUE,
+                     "pressure": PRESSURE_VALUE,
+                     "humidity": HUMIDITY_VALUE,
+                     "speed": SPEED_VALUE,
+                     "deg": DEG_VALUE,
+                 }'
     '''
     data = input_data.model_dump()
 

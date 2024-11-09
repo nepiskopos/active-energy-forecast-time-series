@@ -57,6 +57,24 @@ docker buildx build -t nepiskopos/power .
 docker run -p 8888:8000 --name power nepiskopos/power
 ```
 
+Then, you can send POST HTTP requests to the application API and get the response as a JSON object.
+
+---
+
+To launch a Load-balancing service, first you need to [install Docker](https://docs.docker.com/desktop/install/linux/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
+
+After you setup Docker and launch the Docker service, use the following command to easily build the Docker Image and run all the Containers.
+
+### To build the Docker image naming it "nepiskopos/power-lb" using the provided Dockerfile
+```console
+cd active-energy-prediction-time-series/load_balancer
+docker-compose up
+```
+
+Then, you can send POST HTTP requests to the application API and get the response as a JSON object, just like before, but this time more requests can be served in parallel.
+
+---
+
 ### To send a POST HTTP request to the application API on a running server using cURL and forecast using the ARIMA model:
 ```console
 curl  -X 'POST' 'http://127.0.0.1:8888/api/arima_active_power_forecast_multi'
@@ -79,8 +97,6 @@ curl  -X 'POST' 'http://127.0.0.1:8888/api/arima_active_power_forecast_multi'
             "deg": [DEG_VALUE_1, DEG_VALUE_2, ...],
           }'
 ```
-
-
 
 ### To send a POST HTTP request to the application API on a running server using cURL and forecast using Meta's Prophet model:
 ```console
@@ -106,17 +122,3 @@ curl  -X 'POST' 'http://127.0.0.1:8888/api/prophet_active_power_forecast_multi'
 ```
 
 The service response to the HTTP request is a JSON object which contains the predicted values under the "forecast" key.
-
----
-
-To launch a Load-balancing service, first you need to [install Docker](https://docs.docker.com/desktop/install/linux/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
-
-After you setup Docker and launch the Docker service, use the following command to easily build the Docker Image and run all the Containers.
-
-### To build the Docker image naming it "nepiskopos/power-lb" using the provided Dockerfile
-```console
-cd active-energy-prediction-time-series/load_balancer
-docker-compose up
-```
-
-Then, you can send POST HTTP requests to the application API and get the response as a JSON file, just like before, but this time more requests can be served in parallel.
