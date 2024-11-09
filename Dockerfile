@@ -20,6 +20,10 @@ EXPOSE 8000
 RUN mkdir /root/app/
 
 
+# Add app directory to Python path
+ENV PYTHONPATH=/root/app/
+
+
 # Set Python output direction for printing Python messages from the container
 ENV PYTHONUNBUFFERED=1
 
