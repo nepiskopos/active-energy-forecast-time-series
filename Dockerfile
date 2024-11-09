@@ -1,4 +1,4 @@
-FROM python:3.12.7-slim
+FROM python:3.12-slim
 
 
 LABEL maintainer="Nikos Episkopos <https://linkedin.com/in/nepiskopos/>"
