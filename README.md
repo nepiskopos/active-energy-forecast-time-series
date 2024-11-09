@@ -25,9 +25,9 @@ To manually train these models, you need to use the provided Jupyter notebooks.
 Before running any of these notebooks, you need to download the provided dataset and place the included CSV file under the [train directory](train/). 
 
 The correct order to run these notebooks are:
-1. [EDA](train/eda.ipynb)
-2. [Prophet](train/prophet.ipynb)
-3. [ARIMA](train/arima.ipynb)
+1. [EDA](train/Part_1_EDA.ipynb)
+2. [Prophet](train/Part_2_Prophet.ipynb)
+3. [ARIMA](train/Part_3_ARIMA.ipynb)
 
 Then, you need to place the three generated models under the [service/models](service/models) directory.
 
