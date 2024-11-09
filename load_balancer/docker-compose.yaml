@@ -1,0 +1,56 @@
+services:
+  backend_1:
+    build: ../
+    image: nepiskopos/power
+    environment:
+      - PORT=8000
+    networks:
+      loadbalancing:
+        ipv4_address: 192.168.0.3
+  backend_2:
+    build: ../
+    image: nepiskopos/power
+    environment:
+      - PORT=8000
+    networks:
+      loadbalancing:
+        ipv4_address: 192.168.0.4
+  backend_3:
+    build: ../
+    image: nepiskopos/power
+    environment:
+      - PORT=8000
+    networks:
+      loadbalancing:
+        ipv4_address: 192.168.0.5
+  backend_4:
+    build: ../
+    image: nepiskopos/power
+    environment:
+      - PORT=8000
+    networks:
+      loadbalancing:
+        ipv4_address: 192.168.0.6
+
+  nginx:
+    build: ./
+    image: nepiskopos/power-lb
+    ports:
+      - "8888:80"
+    networks:
+      loadbalancing:
+        ipv4_address: 192.168.0.2
+    depends_on:
+      - backend_1
+      - backend_2
+      - backend_3
+      - backend_4
+
+networks:
+  loadbalancing:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/24
+          gateway: 192.168.0.1

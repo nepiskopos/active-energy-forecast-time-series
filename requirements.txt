@@ -1,0 +1,8 @@
+fastapi[all]==0.114.2
+pandas
+prophet
+pytest
+scikit-learn
+seaborn
+statsmodels
+uvicorn[standard]==0.31.1
